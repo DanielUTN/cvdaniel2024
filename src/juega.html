@@ -45,6 +45,47 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+      body {
+        background-color: skyblue;
+      }
+      button {
+        /* pointer-events: none; */
+
+        position: absolute;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        /* display: flex;
+      justify-content: center;
+      align-items: center; */
+        font-size: 16px;
+        /* margin: 0 auto; */
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: #f44336;
+        color: white;
+        border-radius: 50px;
+        /* transform: scale(1.5); */
+      }
+    </style>
   </head>
 
   <body>
@@ -62,8 +103,8 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html">Sobre Mi</a></li>
-            <li><a class="active" href="resume.html">Experiencia</a></li>
+            <li><a class="active" href="about.html">Sobre Mi</a></li>
+            <li><a href="resume.html">Experiencia</a></li>
             <li><a href="services.html">Proyectos</a></li>
             <li><a href="juega.html">Contrato</a></li>
           </ul>
@@ -75,82 +116,36 @@
     <!-- End Header -->
 
     <main id="main">
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>EXPERIENCIA</h2>
-          </div>
-
-          <!--##################################SEPARADOR##################################################-->
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="resume-item">
-                <h3 class="resume-title">Soporte IT</h3>
-                <h4>OPSI (Optimizacion de Sistemas)</h4>
-                <h5>2024-PRESENTE</h5>
-                <p><em>Contrato</em></p>
-                <p>
-                  Atender a los clientes vía Mail y Teléfono. Entender el
-                  problema, registrarlo, darle una prioridad y derivarlo al
-                  sector correspondiente para poder resolver de manera eficiente
-                  el inconveniente. Testeo de las aplicaciones de la empresa.
-                  Documentación de programas a Nivel Usuario. Uso del Managment
-                  Studio 2019 y del Toad for Oracle para realizar el análisis y
-                  resolver conflictos de los clientes.
-                </p>
-                <p>
-                  <a href="http://www.opsi.com.ar/" target="_blank"
-                    >http://www.opsi.com.ar/</a
-                  >
-                </p>
-              </div>
-              <h3 class="resume-title">Desarrollador</h3>
-              <div class="resume-item">
-                <h4>Pasantia GIDAS</h4>
-                <h5>2022- 2023</h5>
-                <p><em>Pasantia</em></p>
-                <p><em>Facultad UTN-FRLP</em></p>
-                <p>
-                  Desarrollo frontend(Html,Css,Js,Bootstrap) para proyecto
-                  Prácticas Profesionales Supervisadas de la facultad, para el
-                  departamento de Ingeniería Industrial; Backend desarrollo de
-                  API REST; Base de Datos PostreSQL; Test Unitarios; Funcional;
-                  Integradores en Python-Django
-                </p>
-              </div>
+        <div class="center">
+            <div>
+              <button id="myButton">No me convence</button>
+              <br /><br />
+              <br />
+              <br />
             </div>
 
-            <div class="col-lg-6">
-              <div class="resume-item">
-                <h3 class="resume-title">Soporte Tecnico</h3>
-                <h4>Ciberneticos</h4>
-                <h5>2018 - 2022</h5>
-                <p><em>Particular</em></p>
-                <p>
-                  Atención Telefónica como asistente de Soporte Técnico;
-                  Atención al Público; Configuración; Instalación de
-                  Routers-Switchs; Monitoreo Herramientas con MKT(Microtic)
-                </p>
-              </div>
-              <h3 class="resume-title">Software Engineer ABAP</h3>
-              <div class="resume-item">
-                <h4>ACCENTURE</h4>
-                <p><em>Relacion dependencia</em></p>
-                <h5>2011 - 2015</h5>
-                <p>
-                  Desarrollo de Reportes ALV; Desarrollos de programas en ABAP;
-                  Diseños Técnicos aplicando UML; Documentación; Pruebas
-                  Técnicas
-                </p>
-              </div>
+            <div class="otroboton">
+              <br /><br />
+              <button id="staticButton">Si, Contrato</button>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- End Resume Section -->
+        </body>
+        <script>
+          var button = document.getElementById("myButton");
 
-      <!--##################################SEPARADOR##################################################-->
+          button.onmouseover = function (event) {
+            var x = Math.random() * (window.innerWidth - button.clientWidth);
+            var y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+          };
+          //EL OTRO BOTON ESTATICO
+          var staticButton = document.getElementById("staticButton");
+
+          staticButton.onclick = function () {
+            alert("Gracias!, espero con ansias que me contacte. Saludos");
+          };
+        </script>
     </main>
     <!-- End #main -->
 
