@@ -139,11 +139,19 @@
             button.style.left = x + "px";
             button.style.top = y + "px";
           };
+          button.onclick = function (event) {
+            var x = Math.random() * (window.innerWidth - button.clientWidth);
+            var y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+          };
+
+
           //EL OTRO BOTON ESTATICO
           var staticButton = document.getElementById("staticButton");
 
           staticButton.onclick = function () {
-            alert("Gracias!, espero con ansias que me contacte. Saludos");
+            alert("GRACIAS! ESPERO CON ANSIAS ME CONTACTE. SALUDOS!");
           };
         </script>
     </main>
