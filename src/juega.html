@@ -52,6 +52,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        width: 100vw;
         flex-direction: column;
         position: relative;
         overflow: hidden;
@@ -103,10 +104,10 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a class="active" href="about.html">Sobre Mi</a></li>
+            <li><a href="about.html">Sobre Mi</a></li>
             <li><a href="resume.html">Experiencia</a></li>
             <li><a href="services.html">Proyectos</a></li>
-            <li><a href="juega.html">Contrato</a></li>
+            <li><a class="active" href="juega.html">Contrato</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -115,8 +116,8 @@
     </header>
     <!-- End Header -->
 
-    <main id="main">
-        <div class="center">
+    <main class="center" id="main">
+        <div>
             <div>
               <button id="myButton">No me convence</button>
               <br /><br />
@@ -128,7 +129,7 @@
               <br /><br />
               <button id="staticButton">Si, Contrato</button>
             </div>
-          </div>
+        </div>
         </body>
         <script>
           var button = document.getElementById("myButton");
@@ -151,7 +152,16 @@
           var staticButton = document.getElementById("staticButton");
 
           staticButton.onclick = function () {
-            alert("GRACIAS! ESPERO CON ANSIAS ME CONTACTE. SALUDOS!");
+            // alert("GRACIAS! ESPERO CON ANSIAS ME CONTACTE. SALUDOS!");
+            Swal.fire({
+              title: '¡Gracias!',
+              text: 'Espero con ansias me contacte. Saludos!',
+              imageUrl:'assets/img/fotoperfil.jpg',
+              imageWidth:250,
+              imageHeight:250,
+              imageAlt:"micara",
+            });
+
           };
         </script>
     </main>
@@ -182,6 +192,7 @@
     ></a>
 
     <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
